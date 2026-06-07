@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>Registration Form</title>
+
+<script>
+
+function validate()
+{
+var name = document.forms["myform"]["name"].value;
+
+var email = document.forms["myform"]["email"].value;
+
+if(name=="")
+{
+alert("Enter Name");
+return false;
+}
+
+if(email.indexOf("@")==-1)
+{
+alert("Invalid Email");
+return false;
+}
+
+alert("Registration Successful");
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<center>
+
+<h2>Registration Form</h2>
+
+<form name="myform" onsubmit="return validate()">
+
+Name:
+<input type="text" name="name">
+<br><br>
+
+Email:
+<input type="text" name="email">
+<br><br>
+
+Gender:
+<input type="radio" name="g1">Male
+<input type="radio" name="g1">Female
+<br><br>
+
+DOB:
+<input type="date">
+<br><br>
+
+Phone:
+<input type="tel">
+<br><br>
+
+Address:
+<br>
+
+<textarea rows="4" cols="20"></textarea>
+
+<br><br>
+
+<input type="submit" value="Register">
+
+<input type="reset">
+
+</form>
+
+</center>
+
+</body>
+</html>

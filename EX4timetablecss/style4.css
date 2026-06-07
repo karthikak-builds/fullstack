@@ -1,0 +1,19 @@
+body{
+background-color:lightblue;
+}
+
+h2{
+color:darkblue;
+}
+
+table,th,td{
+border:1px solid black;
+border-collapse:collapse;
+padding:10px;
+text-align:center;
+}
+
+table{
+width:70%;
+background-color:white;
+}
