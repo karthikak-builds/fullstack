@@ -1,27 +1,30 @@
 import { useState } from "react";
-function App(){
-const[username,setusername]=useState("");
-const[password,setpassword]=useState("");
-const handlelogin=(e)=>{
-  e.defaultPrevent();
-if(username==="admin" && password==="1234"){
-  alert("login");
-}
-else{
-  alert("no");
-}
-};
-return(
-  <div>
-    <form onSubmit={handlelogin}>
-<input type="text" placeholder="username" value={username} onChange={(e)=>setusername(e.target.value)}>
-</input>
-<input type="text" placeholder="password" value={password} onChange={(e)=>setpassword(e.target.value)}>
-</input>
-<button type="submit">Login</button>
-    </form>
-  </div>
-);
 
+function App() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
-}export default app;
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    if (username === "admin" && password === "1234") {
+      alert("Login Successful");
+    } else {
+      alert("Invalid Username or Password");
+    }
+  };
+
+  return (
+    <div>
+      <form onSubmit={handleLogin}>
+        <input type="text"placeholder="Username"value={username}onChange={(e) => setUsername(e.target.value)}/>
+
+        <input type="password"placeholder="Password"value={password}onChange={(e) => setPassword(e.target.value)} />
+
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  );
+}
+
+export default App;
